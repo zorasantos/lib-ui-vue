@@ -1,0 +1,6 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CheckBox > renders label and input correctly 1`] = `
+"<div class=\\"flex items-center\\"><input id=\\"checkbox\\" type=\\"checkbox\\" class=\\"w-4 h-4 cursor-pointer border-8 text-blue-500 bg-gray-100 rounded\\"><label for=\\"checkbox\\" class=\\"ml-2 block text-base font-medium text-gray-600\\">Accept term!</label></div>
+<!--v-if-->"
+`;
