@@ -3,31 +3,27 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:vue/vue3-essential",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "@vue/eslint-config-prettier/skip-formatting",
-  ],
+  extends: ["eslint:recommended", "plugin:vue/vue3-essential", "plugin:@typescript-eslint/recommended", "prettier", "@vue/eslint-config-prettier/skip-formatting", "plugin:storybook/recommended"],
   overrides: [],
   settings: {
     vue: {
-      version: "detect",
-    },
+      version: "detect"
+    }
   },
   parser: "vue-eslint-parser",
   parserOptions: {
     parser: "@typescript-eslint/parser",
     ecmaVersion: "latest",
-    sourceType: "module",
+    sourceType: "module"
   },
   plugins: ["vue", "@typescript-eslint"],
   rules: {
     "vue/require-default-prop": "off",
     "vue/multi-word-component-names": "off",
-    "prettier/prettier": ["error", { endOfLine: "auto" }],
-  },
+    "prettier/prettier": ["error", {
+      endOfLine: "auto"
+    }]
+  }
 };
