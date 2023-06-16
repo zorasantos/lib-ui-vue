@@ -1,7 +1,6 @@
 {
-  "name": "@zora/lib-ui-vue",
-  "private": true,
-  "version": "1.0.0",
+  "name": "@zorasantos/lib-ui-vue",
+  "version": "0.1.0",
   "type": "module",
   "files": [
     "dist"
@@ -14,6 +13,9 @@
       "require": "./dist/lib-ui-vue.umd.cjs"
     },
     "./style.css": "./dist/style.css"
+  },
+  "publishConfig": {
+    "@zorasantos:registry": "https://npm.pkg.github.com/"
   },
   "types": "./dist/index.d.ts",
   "husky": {
