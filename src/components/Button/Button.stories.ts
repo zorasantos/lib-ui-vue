@@ -1,13 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from "@storybook/vue3";
 
-import Button from './index.vue';
+import Button from "./Button.vue";
 
 const meta = {
-  title: 'Button',
+  title: "Button",
   component: Button,
-  tags: ['autodocs'],
-  argTypes: {
-  },
+  tags: ["autodocs"],
+  argTypes: {},
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -18,6 +17,6 @@ export const Default: Story = {
   args: {
     label: "Button",
     loading: false,
-    block: false
-  }
+    block: false,
+  },
 };

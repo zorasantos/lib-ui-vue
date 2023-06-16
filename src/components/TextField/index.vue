@@ -17,6 +17,8 @@ const handleFocus = () => {
 const handleBlur = () => {
   inputFocus.value = false;
 };
+
+// Testar mudar a cor da borda pela propriedade active ex: active:border-b
 </script>
 <template>
   <div class="mb-8">
