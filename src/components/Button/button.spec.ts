@@ -1,6 +1,6 @@
 import { mount } from "@vue/test-utils";
 import Button from "./Button.vue";
-describe.skip("Button", () => {
+describe("Button", () => {
   test("render default button", () => {
     const wrapper = mount(Button, {
       props: {
@@ -13,13 +13,14 @@ describe.skip("Button", () => {
     expect(wrapper.html()).toMatchSnapshot();
     expect(wrapper.find("button").text()).toBe("Login");
     expect(wrapper.find("button").classes("bg-blue-600")).toBe(true);
+    expect(wrapper.find("button").classes("w-full")).toBe(false);
   });
 
-  test("renders the button with loading spinner when loading", () => {
+  test("render the button with loading spinner if loading property true", () => {
     const wrapper = mount(Button, {
       props: {
         label: "Login",
-        loading: false,
+        loading: true,
         block: false,
       },
     });
@@ -29,17 +30,17 @@ describe.skip("Button", () => {
     expect(wrapper.find("button").classes("bg-gray-200")).toBe(true);
   });
 
-  test("renders the button when add style", () => {
+  test("render large button if block property true", () => {
     const wrapper = mount(Button, {
       props: {
-        label: "Login",
+        label: "Submit",
         loading: false,
-        block: false,
+        block: true,
       },
     });
 
     expect(wrapper.find("button").text()).toBe("Submit");
     expect(wrapper.find("button").classes("bg-blue-600")).toBe(true);
-    expect(wrapper.find("button").classes("cursor-auto")).toBe(true);
+    expect(wrapper.find("button").classes("w-full")).toBe(true);
   });
 });
