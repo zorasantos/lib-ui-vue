@@ -1,6 +1,6 @@
 name: Publish Package to npm
 on:
-   push:
+  push:
     branches: [main]
   release:
     types: [published]
