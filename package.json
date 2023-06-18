@@ -1,6 +1,6 @@
 {
   "name": "lib-ui-vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "files": [
     "dist"
@@ -36,6 +36,7 @@
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",
     "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "release": "npm run build && changeset publish",
     "types": "vue-tsc ",
     "test": "vitest --no-watch -- --bail",
     "test:watch": "vitest",
