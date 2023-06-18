@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineProps<{ msg: string }>();
+defineProps<{ name: string }>();
 </script>
 
 <template>
-  <h1 className="text-2xl font-bold">{{ msg }}</h1>
+  <h1 className="text-2xl font-bold">{{ name }}</h1>
 </template>

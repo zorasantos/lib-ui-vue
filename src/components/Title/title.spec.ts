@@ -2,12 +2,12 @@ import { mount } from "@vue/test-utils";
 import HelloWorld from "./Title.vue";
 describe("HelloWorld", () => {
   test("renders message", () => {
-    const msg = "Hello world";
+    const name = "Hello world";
     const wrapper = mount(HelloWorld, {
       props: {
-        msg,
+        name,
       },
     });
-    expect(wrapper.text()).toContain(msg);
+    expect(wrapper.text()).toContain(name);
   });
 });

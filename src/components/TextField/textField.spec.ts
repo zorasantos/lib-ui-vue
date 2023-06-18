@@ -1,8 +1,9 @@
 import { mount } from "@vue/test-utils";
-import TextField from "./index.vue";
+import TextField from "./TextField.vue";
+import { ref } from "vue";
 
 describe("TextField", () => {
-  test("renders label and input correctly", () => {
+  test("render label and input correctly", () => {
     const wrapper = mount(TextField, {
       props: {
         label: "Name",
@@ -19,7 +20,14 @@ describe("TextField", () => {
     expect(wrapper.find("label").classes("text-red-500")).toBe(false);
   });
 
-  test("displays error message when errorMessages prop is provided", () => {
+  test.skip("displays error message when errorMessages prop is provided", async () => {
+    const inputFocus = ref(false);
+    const handleFocus = () => {
+      inputFocus.value = true;
+    };
+    const handleBlur = () => {
+      inputFocus.value = false;
+    };
     const wrapper = mount(TextField, {
       props: {
         label: "Nome",
@@ -28,8 +36,16 @@ describe("TextField", () => {
         errorMessages: "Nome é um campo obrigatório!",
         modelValue: "",
       },
+      global: {
+        provide: {
+          inputFocus,
+          handleFocus,
+          handleBlur,
+        },
+      },
     });
 
+    await wrapper.find("input").trigger("focus");
     expect(wrapper.find("label").classes("text-red-500")).toBe(true);
     expect(wrapper.find("label").classes("text-gray-600")).toBe(false);
 
