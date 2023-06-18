@@ -1,5 +1,5 @@
 {
-  "name": "@zorasantos/lib-ui-vue",
+  "name": "lib-ui-vue",
   "version": "0.1.0",
   "type": "module",
   "files": [
@@ -15,7 +15,7 @@
     "./style.css": "./dist/style.css"
   },
   "publishConfig": {
-    "@zorasantos:registry": "https://npm.pkg.github.com/"
+    "lib-ui-vue:registry": "https://npm.pkg.github.com/"
   },
   "types": "./dist/index.d.ts",
   "husky": {
@@ -76,6 +76,8 @@
     "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
     "storybook": "^7.0.21",
     "tailwindcss": "^3.3.1",
     "typescript": "^4.9.3",
