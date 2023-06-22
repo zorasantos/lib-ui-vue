@@ -10,7 +10,7 @@ import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), dts(), terser(), postcss()],
+  plugins: [vue(), dts()],
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
@@ -24,6 +24,7 @@ export default defineConfig({
           vue: "Vue",
         },
       },
+      plugins: [terser(), postcss()],
     },
   },
   resolve: {

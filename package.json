@@ -1,7 +1,10 @@
 {
   "name": "lib-ui-vue",
-  "version": "0.2.0",
+  "description": "Lib UI with vue 3 and tailwindcss for personal use.",
+  "author": "Zoranildo Santos",
+  "version": "0.2.2",
   "type": "module",
+  "license": "MIT",
   "files": [
     "dist"
   ],
@@ -26,6 +29,14 @@
       "yarn test"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zorasantos/lib-ui-vue"
+  },
+  "bugs": {
+    "url": "https://github.com/zorasantos/lib-ui-vue/issues"
+  },
+  "keywords": ["vue", "typescript", "ui", "tailwindcss"],
   "scripts": {
     "dev": "vite",
     "lint": "vue-tsc --noEmit && eslint src/**/*.{ts,vue} --max-warnings=0",
@@ -80,6 +91,7 @@
     "tailwindcss": "^3.3.1",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
+    "vite-plugin-compression": "^0.5.1",
     "vite-plugin-dts": "^2.3.0",
     "vitest": "^0.29.8",
     "vue-eslint-parser": "^9.1.1",
